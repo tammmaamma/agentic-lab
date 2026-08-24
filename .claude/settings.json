@@ -10,6 +10,16 @@
           }
         ]
       }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "d=\"$CLAUDE_PROJECT_DIR\"; s=$(printf '%s' \"$d\" | sed 's/[\\/:]/-/g'); dir=\"$HOME/.claude/projects/$s\"; f=$(ls -t \"$dir\"/*.jsonl 2>/dev/null | head -n 1); [ -z \"$f\" ] && exit 0; [ -f \"$CLAUDE_PROJECT_DIR/scripts/token-report.js\" ] || exit 0; node \"$CLAUDE_PROJECT_DIR/scripts/token-report.js\" \"$f\" 2>/dev/null | tail -n 2"
+          }
+        ]
+      }
     ]
   }
 }
