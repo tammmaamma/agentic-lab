@@ -12,7 +12,7 @@
 - 환불 수수료율: **5%** (`REFUND_FEE_RATE = 0.05`, `src/payments/refund.js` 상단 상수)
 - 계산식:
   ```
-  feeAmountMinor = Math.round(originalAmountMinor * 0.05)
+  feeAmountMinor = Math.floor(originalAmountMinor * 0.05)
   refundedAmountMinor = originalAmountMinor - feeAmountMinor
   ```
 - 반올림 정책: **Math.floor (내림)**. 반올림/올림이 아님 — 소수점 전 단위가 나오는 경우(예: 999전 × 5% = 49.95) 내림해서 정수로 만든다 (사용자에게 유리한 방향).
