@@ -1,0 +1,8 @@
+{
+  "task": "student-id-validator",
+  "steps": [
+    { "id": "step0", "title": "검증 함수 TDD", "status": "pending" },
+    { "id": "step1", "title": "CLI 통합", "status": "pending" }
+  ],
+  "summaries": {}
+}
