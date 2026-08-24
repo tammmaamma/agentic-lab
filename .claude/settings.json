@@ -11,6 +11,17 @@
         ]
       }
     ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"$(date '+%F %T') | $CLAUDE_TOOL_INPUT\" >> \"$CLAUDE_PROJECT_DIR/.claude/audit.log\" 2>/dev/null; exit 0"
+          }
+        ]
+      }
+    ],
     "Stop": [
       {
         "hooks": [
