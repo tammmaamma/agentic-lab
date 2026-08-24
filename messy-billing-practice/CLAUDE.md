@@ -28,3 +28,10 @@
 - `src/billing/`, `src/old/`는 **DEPRECATED** — 절대 수정·참조 금지.
 - 금액에 원 단위 float 사용 금지. 항상 전(minor unit) 정수로 다룰 것.
 - 결제 로그는 `lib/logger.js`의 `logPayment()`만 사용. `logInfo`/`logError` 직접 호출 금지.
+
+## 지식 저장소(_brain) 규칙
+
+- 위치: 팀 지식은 `_brain/`에 markdown으로만 — `index.md`(목차)·`log.md`(변경 기록)·`decision/`·`meeting/`·`postmortem/`.
+- 형식: 각 파일 frontmatter에 `status`(stub/draft/solid)·`sources`(원본 경로), 본문엔 `[[다른노드]]` 링크.
+- 원칙: 원본(raw)은 수정 금지. 모순된 정보는 지우지 말고 "모순/주의" 섹션에 병기. 민감 정보(키·개인정보)는 넣지 않는다.
+- 참조: @_brain/index.md
