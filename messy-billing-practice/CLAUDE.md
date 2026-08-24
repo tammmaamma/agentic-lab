@@ -23,6 +23,7 @@
 **구조**
 - 활성 결제 코드는 `src/payments/`뿐이다.
 - 상세 결제 규칙(수수료 계산·검증·에러 처리): @docs/payment-rules.md
+- step 기반 작업(`phases/*/stepN.md`) 착수 전 readiness 게이트: @docs/step-principles.md
 
 **금지사항**
 - `src/billing/`, `src/old/`는 **DEPRECATED** — 절대 수정·참조 금지.
