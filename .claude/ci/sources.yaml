@@ -1,0 +1,24 @@
+# .claude/ci/sources.yaml
+# 이 저장소에서 agent가 답을 찾을 때 봐야 할 모든 곳의 목록.
+
+code:
+  - messy-billing-practice/src/          # 결제/환불 소스 코드 (활성: payments/, DEPRECATED: billing/, old/)
+  - messy-billing-practice/tests/        # 테스트 (node --test, npm test로 실행)
+  - messy-billing-practice/package.json  # 실행 스크립트·main 진입점 정의
+
+rules:
+  - CLAUDE.md        # 저장소 공통 규칙 라우터 — 하위 프로젝트에서는 messy-billing-practice/CLAUDE.md가 우선
+  - GOLDEN_RULES.md   # 절대 위반 금지 규칙 — 하위 프로젝트에서는 messy-billing-practice/GOLDEN_RULES.md가 우선
+
+knowledge:
+  - messy-billing-practice/_brain/index.md   # _brain 위키 목차
+  - messy-billing-practice/_brain/decision/  # 팀 결정 노드 (검증 게이트, 문서 규격, 배포·가드레일 등)
+  - messy-billing-practice/_brain/meeting/   # 세미나·회의 원기록 노드
+
+reports:
+  - report-week6.md  # 6주차 실습 일지 (진행 중, 뼈대만 채워진 상태)
+
+external:
+  - name: 예시-플러그인
+    url: github.com/jha0313/agentic-eng-plugin
+    note: 팀 플러그인 구조 참고
