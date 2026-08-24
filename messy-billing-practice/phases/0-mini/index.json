@@ -1,8 +1,10 @@
 {
   "task": "student-id-validator",
   "steps": [
-    { "id": "step0", "title": "검증 함수 TDD", "status": "pending" },
+    { "id": "step0", "title": "검증 함수 TDD", "status": "completed" },
     { "id": "step1", "title": "CLI 통합", "status": "pending" }
   ],
-  "summaries": {}
+  "summaries": {
+    "step0": "validateStudentId(id)를 src/student-id.js에 구현. 형식은 /^D(\\d{4})-\\d{4}$/ 완전일치이며 대소문자·공백은 정규화하지 않는다.\n정규식 통과 시에만 연도(2000~올해, 양끝 포함) 범위를 검사하고, reason은 '학번 형식이 아닙니다 (예: D2026-1234)' 또는 '입학년도가 유효 범위(2000~{올해})를 벗어났습니다' 두 고정 문자열 중 하나만 반환한다.\ntests/student-id.test.js 8개(엣지 6 + 정상 2)를 포함해 npm test 16개 전체 통과(RED→GREEN 확인, 기존 refund/coupon 회귀 없음)."
+  }
 }
